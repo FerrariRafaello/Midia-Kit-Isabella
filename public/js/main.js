@@ -51,7 +51,7 @@ if (lightbox) {
     lightboxImg.src = "";
   };
   document.querySelectorAll(".photo-item img").forEach((img) => {
-    img.addEventListener("click", () => open(img.currentSrc || img.src, img.alt));
+    img.addEventListener("click", () => open(img.dataset.full || img.currentSrc || img.src, img.alt));
   });
   // Clicar na foto amplia/reduz o zoom; clicar fora dela fecha.
   lightboxImg.addEventListener("click", (e) => {
